@@ -1,3 +1,22 @@
-<html><head><title>Litter: twitter 4 cats </title></head>
-<body><h1>I'm a Kitty</h1><p>Education is much better with cats</p>
-<p>Cats are purrfect </p></body></html>
+<html>
+  <head>
+    <title>Litter: twitter for cats </title>
+  </head>
+  <body>
+     <textarea maxlength="140" cols="70" id="scratch_textbox"></textarea>
+     <div id="scratches"></div>
+     <script>
+     textarea = document.getElementById('scratch_textbox');
+    textarea.addEventListener('keydown', function(event){
+   if(event.keyCode === 13){
+      var scratch_text = document.createTextNode(textarea.value);
+var        scratch=document.createElement('p');
+scratch.appendChild(scratch_text);
+
+var scratch_stack = document.getElementById('scratches');
+scratch_stack.insertBefore(scratch, scratch_stack.firstChild);
+    }
+}, false);
+     </script>
+  </body>
+</html>

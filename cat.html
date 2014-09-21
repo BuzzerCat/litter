@@ -15,6 +15,16 @@ scratch.appendChild(scratch_text);
 
 var scratch_stack = document.getElementById('scratches');
 scratch_stack.insertBefore(scratch, scratch_stack.firstChild);
+var  xmlhttp = new XMLHttpRequest();
+
+   var scratchvalue=encodeURIComponent(textarea.value)
+   var parameters="scratch="+scratchvalue
+   
+    xmlhttp.open("POST", "cat.html", true);
+    mypostrequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+mypostrequest.send(parameters)
+}
+
     }
 }, false);
      </script>

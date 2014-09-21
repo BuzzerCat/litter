@@ -1,8 +1,10 @@
 var http = require("http");
+var fs = require('fs');
+var index = fs.readFileSync('cat.html');
 
 var answer = function(request, response) {
   response.writeHead(200, {"Content-Type": "text/html"});
-  response.write("<h1> You're a kitty</h1>");
+  response.write(index);
   response.end();
 }
 

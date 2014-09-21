@@ -3,6 +3,8 @@ var fs = require('fs');
 var index = fs.readFileSync('cat.html');
 
 var answer = function(request, response) {
+  console.log(request);
+
   response.writeHead(200, {"Content-Type": "text/html"});
   response.write(index);
   response.end();

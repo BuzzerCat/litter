@@ -18,12 +18,11 @@ scratch_stack.insertBefore(scratch, scratch_stack.firstChild);
 var  xmlhttp = new XMLHttpRequest();
 
    var scratchvalue=encodeURIComponent(textarea.value)
-   var parameters="scratch="+scratchvalue
+   var parameters="scratch="+scratchvalue;
    
     xmlhttp.open("POST", "cat.html", true);
-    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
-    xmlhttp.send(parameters)
-}
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send(parameters);
 
     }
 }, false);

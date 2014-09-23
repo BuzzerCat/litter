@@ -4,13 +4,17 @@ var index = fs.readFileSync('cat.html');
 
 var answer = function(request, response) {
   console.log(request.method );
+   var fullbody = "";
 
   if ( request.method === "POST"){
      console.log("postal")
+
       request.on('data', function(chunk) {
-      console.log("Received body data:");
-      console.log(chunk.toString());
-    });
+         console.log("Received body data:");
+         fullbody += chunk.toString()
+         console.log(fullbody);
+         
+      });
     
     request.on('end', function() {
       // empty 200 OK response for now
@@ -21,7 +25,7 @@ var answer = function(request, response) {
   }
   else if(request.method === "GET"){
     console.log("ghetto");
-    response.writeHead(200, {"Content-Type": "text/html"});
+    response.writeHead(200, {"Content-Type": "tex/html"});
     response.write(index);
     response.end();
    }

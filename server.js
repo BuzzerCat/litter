@@ -1,7 +1,8 @@
 var http = require("http");
 var fs = require('fs');
 var querystring = require('querystring');
-var index = fs.readFileSync('cat.html');
+var header = fs.readFileSync('header');
+var footer  = fs.readFileSync('footer')
 
 var answer = function(request, response) {
   console.log(request.method );

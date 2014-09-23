@@ -7,7 +7,7 @@ var answer = function(request, response) {
   if ( request.method === "POST"){
      console.log("postal")
   }
-  elseif(request.method === "GET"){
+  else if(request.method === "GET"){
     console.log("ghetto");
    }
 

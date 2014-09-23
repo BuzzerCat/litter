@@ -1,0 +1,7 @@
+<html>
+  <head>
+    <title>Litter: twitter for cats </title>
+  </head>
+  <body>
+     <textarea maxlength="140" cols="70" id="scratch_textbox"></textarea>
+     <div id="scratches">

@@ -4,18 +4,20 @@ var index = fs.readFileSync('cat.html');
 
 var answer = function(request, response) {
   console.log(request.method );
+  var fullbody = "";
 
   if ( request.method === "POST"){
      console.log("postal")
       request.on('data', function(chunk) {
-      console.log("Received body data:");
-      console.log(chunk.toString());
-    });
+        console.log("Received body data:");
+        fullbody += chunk.toString();
+      });
     
     request.on('end', function() {
       // empty 200 OK response for now
-      response.writeHead(200, "OK", {'Content-Type': 'text/html'});
-      response.end();
+      //response.writeHead(200, "OK", {'Content-Type': 'text/html'});
+      //response.end();
+      console.log(fullbody);
     });
 
   }

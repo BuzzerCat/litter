@@ -1,5 +1,6 @@
 var http = require("http");
 var fs = require('fs');
+var querystring = require('querystring');
 var index = fs.readFileSync('cat.html');
 
 var answer = function(request, response) {
@@ -17,7 +18,8 @@ var answer = function(request, response) {
       // empty 200 OK response for now
       //response.writeHead(200, "OK", {'Content-Type': 'text/html'});
       //response.end();
-      console.log(fullbody);
+      var decodedbody = querystring.parse(fullbody);
+      console.log(decodedbody);
     });
 
   }

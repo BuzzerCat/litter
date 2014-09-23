@@ -4,6 +4,12 @@ var index = fs.readFileSync('cat.html');
 
 var answer = function(request, response) {
   console.log(request.method );
+  if ( request.method === "POST"){
+     console.log("postal")
+  }
+  elseif(request.method === "GET"){
+    console.log("ghetto");
+   }
 
   response.writeHead(200, {"Content-Type": "text/html"});
   response.write(index);

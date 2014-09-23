@@ -19,7 +19,7 @@ var answer = function(request, response) {
       //response.writeHead(200, "OK", {'Content-Type': 'text/html'});
       //response.end();
       var decodedbody = querystring.parse(fullbody);
-      console.log(decodedbody);
+      console.log(decodedbody.scratch);
     });
 
   }

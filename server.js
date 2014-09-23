@@ -20,6 +20,10 @@ var answer = function(request, response) {
       //response.end();
       var decodedbody = querystring.parse(fullbody);
       console.log(decodedbody.scratch);
+      fs.appendFile('scratches.txt', decodedbody.scratch, function (err) {
+  if (err) throw err;
+  console.log('The "data to append" was appended to file!');
+});
     });
 
   }

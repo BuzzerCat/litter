@@ -29,7 +29,7 @@ var answer = function(request, response) {
 
   }
   else if(request.method === "GET"){
-    console.log("ghetto");
+    //console.log("ghetto");
     response.writeHead(200, {"Content-Type": "text/html"});
      response.write(header);
      var scratches_array = require('fs').readFileSync('scratches.txt').toString().split('\n')

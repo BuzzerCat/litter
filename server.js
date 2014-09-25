@@ -6,9 +6,10 @@ var footer  = fs.readFileSync('footer')
 
 var answer = function(request, response) {
   console.log(request.method );
-  var fullbody = "";
+  
 
   if ( request.method === "POST"){
+      var fullbody = "";
       request.on('data', function(chunk) {
         fullbody += chunk.toString();
       });

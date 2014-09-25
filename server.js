@@ -9,9 +9,9 @@ var answer = function(request, response) {
   var fullbody = "";
 
   if ( request.method === "POST"){
-     console.log("postal")
+     //console.log("postal")
       request.on('data', function(chunk) {
-        console.log("Received body data:");
+        //console.log("Received body data:");
         fullbody += chunk.toString();
       });
     
@@ -20,10 +20,10 @@ var answer = function(request, response) {
       //response.writeHead(200, "OK", {'Content-Type': 'text/html'});
       //response.end();
       var decodedbody = querystring.parse(fullbody);
-      console.log(decodedbody.scratch);
+      //console.log(decodedbody.scratch);
       fs.appendFile('scratches.txt', decodedbody.scratch+"\n", function (err) {
   if (err) throw err;
-  console.log('The "data to append" was appended to file!');
+    //console.log('The "data to append" was appended to file!');
 });
     });
 

@@ -26,8 +26,8 @@ var answer = function(request, response) {
   else if(request.method === "GET"){
     response.writeHead(200, {"Content-Type": "text/html"});
      response.write(header);
-     var scratches_array = fs.readFileSync('scratches.txt').toString().split('\n')
-     for(var i = scratches_array.length - 1; i > scratches_array.length - 20; i--)
+     var scratches_array = fs.readFileSync('scratches.txt').toString().split('\n').reverse()
+     for(var i = 0; i<20; i++)
        { 
          response.write("<p>" + scratches_array[i] + "</p>");
        }

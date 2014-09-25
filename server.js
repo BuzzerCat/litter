@@ -16,6 +16,7 @@ var answer = function(request, response) {
     
     request.on('end', function() {
       var decodedbody = querystring.parse(fullbody);
+      console.log(decodedbody);
       fs.appendFile('scratches.txt', decodedbody.scratch+"\n", function (err) {
   if (err) throw err;
     });

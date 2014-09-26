@@ -11,7 +11,7 @@ var answer = function(request, response) {
   var pathname = url.parse(request.url).pathname;
   console.log("Request for " + pathname + " received.");
   
-  if (pathname === '/')
+  if (pathname === '/'){
     if ( request.method === "POST"){
         var fullbody = "";
         request.on('data', function(chunk) {

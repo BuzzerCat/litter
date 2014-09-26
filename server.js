@@ -39,6 +39,11 @@ var answer = function(request, response) {
       response.end();
      }
    }
+   else if ( pathname === "/login"){
+    response.writeHead(200, {"Content-Type": "text/plain"});
+    response.write("beginning to add a login page.");
+    response.end();
+   }
 
   
 }

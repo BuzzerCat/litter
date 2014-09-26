@@ -40,10 +40,15 @@ var answer = function(request, response) {
      }
    }
    else if ( pathname === "/login"){
-    var login =fs.readFileSync("login");
-    response.writeHead(200, {"Content-Type": "text/html"});
-    response.write(login);
-    response.end();
+    if(request.method === "GET"){
+     var login =fs.readFileSync("login");
+     response.writeHead(200, {"Content-Type": "text/html"});
+     response.write(login);
+     response.end();
+    }
+    else if ( request.method === "POST"){
+       console.log("form submitted.");
+    }
    }
 
   

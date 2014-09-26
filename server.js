@@ -49,6 +49,7 @@ var answer = function(request, response) {
     }
     else if ( request.method === "POST"){
        console.log("form submitted.");
+       response.redirect("/");
     }
    }
 

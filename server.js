@@ -28,6 +28,7 @@ var answer = function(request, response) {
 
     }
     else if(request.method === "GET"){
+      console.log(request.method + " should be  a get method");
       response.writeHead(200, {"Content-Type": "text/html"});
        response.write(fs.readFileSync("header"));
        var scratches_array = fs.readFileSync('scratches.txt').toString().split('\n').reverse()

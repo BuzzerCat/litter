@@ -50,14 +50,14 @@ var answer = function(request, response) {
     else if ( request.method === "POST"){
         var fullbody = "";
         request.on('data', function(chunk) {
-          fullbody += chunk.toString();
-        });
+          fullbody += chunk.toString()
+         });
     
       request.on('end', function() {
         var decodedbody = querystring.parse(fullbody);
         console.log(decodedbody);
         });
-      });
+    
 
        console.log("form submitted.");
        response.writeHead(301,

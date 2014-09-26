@@ -25,13 +25,13 @@ var answer = function(request, response) {
   }
   else if(request.method === "GET"){
     response.writeHead(200, {"Content-Type": "text/html"});
-     response.write(header);
+     response.write(fs.readFileSync("header"));
      var scratches_array = fs.readFileSync('scratches.txt').toString().split('\n').reverse()
      for(var i = 0; i<20; i++)
        { 
          response.write("<p>" + scratches_array[i] + "</p>");
        }
-    response.write(footer);
+    response.write(fs.readFileSync("footer"));
     response.end();
    }
 

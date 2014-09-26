@@ -40,8 +40,9 @@ var answer = function(request, response) {
      }
    }
    else if ( pathname === "/login"){
+    var login =fs.readFileSync("login");
     response.writeHead(200, {"Content-Type": "text/plain"});
-    response.write("beginning to add a login page.");
+    response.write(login);
     response.end();
    }
 

@@ -49,7 +49,10 @@ var answer = function(request, response) {
     }
     else if ( request.method === "POST"){
        console.log("form submitted.");
-       response.redirect("/");
+       response.writeHead(301,
+           {Location: 'http://www.grocer-ease.com:8888/'}
+         );
+         response.end();
     }
    }
 

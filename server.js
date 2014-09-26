@@ -41,7 +41,7 @@ var answer = function(request, response) {
    }
    else if ( pathname === "/login"){
     var login =fs.readFileSync("login");
-    response.writeHead(200, {"Content-Type": "text/plain"});
+    response.writeHead(200, {"Content-Type": "text/html"});
     response.write(login);
     response.end();
    }

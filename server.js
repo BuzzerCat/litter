@@ -6,6 +6,8 @@ var footer  = fs.readFileSync('footer')
 
 var answer = function(request, response) {
   console.log(request.method );
+  var pathname = url.parse(request.url).pathname;
+  console.log("Request for " + pathname + " received.");
   
 
   if ( request.method === "POST"){
